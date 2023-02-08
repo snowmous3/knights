@@ -1,0 +1,14 @@
+version: "2"
+services:
+  mongodb:
+    container_name: knights-mongodb
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_DATABASE=container
+      - MONGO_DATABASE=knights
+    restart: unless-stopped
+    volumes:
+    - ${DATA_PATH}/mongodb:/data
+    - ${DATA_PATH}/mongodb/db:/data/db
+    ports:
+    - "27017:27017"
