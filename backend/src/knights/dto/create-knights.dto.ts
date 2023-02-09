@@ -25,14 +25,14 @@ export class CreateKnightsDto {
 
   @ApiProperty()
   @IsNotEmpty()
-  birthday?: string;
+  birthday?: string; // MM/DD/YYYY
 
   @ApiProperty()
   @IsNotEmpty()
   weapons: [Weapons];
 
-  // @ApiProperty()
-  // attributes: Attributes;
+  // @IsNotEmpty()
+  attributes: Attribute;
 
   @ApiProperty()
   @IsNotEmpty()
@@ -60,28 +60,28 @@ export class Weapons {
   equipped?: boolean = true;
 }
 
-export class Attributes {
+export class Attribute {
   @ApiProperty()
-  // @IsNotEmpty()
+  @IsNotEmpty()
   strength: number;
 
   @ApiProperty()
-  // @IsNotEmpty()
+  @IsNotEmpty()
   dexterity: number;
 
   @ApiProperty()
-  // @IsNotEmpty()
+  @IsNotEmpty()
   constitution: number;
 
   @ApiProperty()
-  // @IsNotEmpty()
+  @IsNotEmpty()
   intelligence: number;
 
   @ApiProperty()
-  // @IsNotEmpty()
+  @IsNotEmpty()
   wisdom: number;
 
   @ApiProperty()
-  // @IsNotEmpty()
+  @IsNotEmpty()
   charisma: number;
 }

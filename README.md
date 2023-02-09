@@ -16,6 +16,11 @@ $ yarn install
 <br>
 
 To the frontend use: <br>
+```bash
+$ cd frontend
+
+$ npm install
+```
 
 
 ## Database
@@ -49,3 +54,8 @@ $ yarn run start:prod
 <br>
 
 frontend:<br>
+```bash
+$ cd frontend
+
+$ npm run dev
+```

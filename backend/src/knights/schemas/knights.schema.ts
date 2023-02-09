@@ -8,12 +8,13 @@ export class Knights {
   @Prop()
   name: string;
 
-  @Prop({ require: true })
+  @Prop({ require: true, unique: true })
   nickname: string;
 
   @Prop({ require: true })
-  birthday: string;
+  birthday: string; // MM/DD/YYYY
 
+  // TODO: validate this inputs
   @Prop({ require: true })
   weapons: Array<{
     name: string;
@@ -23,7 +24,8 @@ export class Knights {
   }>;
 
   // @Prop()
-  // attributes: any;
+  // TODO: validate this inputs
+  attributes: any;
 
   @Prop({ require: true })
   keyAttribute: string;
